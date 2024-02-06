@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>$Y2K</title>
     <link rel="stylesheet" href="./style.css">
-    <link href="./node_modules/os-gui/build/layout.css" rel="stylesheet" type="text/css">
-    <link href="./node_modules/os-gui/build/windows-98.css" rel="stylesheet" type="text/css">
-    <link href="./node_modules/os-gui/build/layout.css" rel="stylesheet" type="text/css">
     <body>
 
       <div id="desktop">
@@ -70,16 +67,20 @@
 
             <div id="ie-header">
               <img id="ie-mini-icon" src="./metadata/win98icons/html.ico"
-              <span id="ie-title">Internet Explorer - [Buy $Y2K]</span>
-              <button id="ie-minimize">
-                <img src="./metadata/window/minimize.png">
-              </button>
-              <button id="ie-maximize">
-                <img src="./metadata/window/maximize.png">
-              </button>
-              <button id="ie-close">
-                <img src="./metadata/window/close.png">
-              </button>
+              <span id="ie-title">Buy $Y2K! - Internet Explorer</span>
+              
+              <div id="ie-controls">
+                <button id="ie-minimize">
+                  <img src="./metadata/window/minimize.png">
+                </button>
+                <button id="ie-maximize">
+                  <img src="./metadata/window/maximize.png">
+                </button>
+                <button id="ie-close">
+                  <img src="./metadata/window/close.png">
+                </button>
+              </div>
+
             </div>
 
             <iframe id="ie-content" src=""></iframe>
@@ -102,9 +103,6 @@
 
       </div>
       <script src="./app.js"></script>
-      <script src="./node_modules/os-gui/MenuBar.js"></script>
-      <script src="./node_modules/jquery/src/jquery.js"></script> <!-- required by $Window.js -->
-      <script src="./node_modules/os-gui/$Window.js"></script>
     </body>
   </head>
 </html>

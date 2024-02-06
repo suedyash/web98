@@ -149,6 +149,7 @@ Taskbar Recreation
 /*
 Internet Explorer Window
 */
+
 #ie-window {
   position: fixed;
   z-index: 10;
@@ -157,35 +158,59 @@ Internet Explorer Window
   width: 80%;
   height: 80%;
   background-color: #c3c3c3;
-  padding: 20px #c3c3c3;
-}
-#ie-header {
-  z-index: 9;
-  height: 20px;
-  background-color: #010081;
-  color: #fdffff;
+  padding: 3px;
+  box-sizing: border-box;
 }
 
+#ie-header {
+  display: flex;
+  align-items: center;
+  background-color: #010081;
+  color: #fdffff;
+  font-family: 'w98';
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1px;
+  height: 20px;
+  padding: 0 2px;
+}
+
+#ie-mini-icon {
+  width: 15px;
+  height: 15px;
+  margin-right: 2px;
+}
+
+#ie-controls {
+  display: flex;
+  margin-left: auto;
+}
 #ie-minimize,
-#ie-maximize,
-#ie-close {
-  position: relative;
+#ie-maximize {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #d6d6ce;
   width: 16px;
-  height: 16px;
-}
-#ie-minimize {
-  right: 25px;
-}
-#ie-maximize {
-  right: 15px;
+  height: 14px;
+  cursor: pointer;
+  margin-right: 2px;
 }
 #ie-close {
-  right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d6d6ce;
+  width: 16px;
+  height: 14px;
+  cursor: pointer;
+  margin-left: 2px;
+  margin-right: 2px;
 }
 
 #ie-content{
-  width: 100%; 
-  height: 100%;
   z-index: 8;
+  width: 100%; 
+  height: calc(100% - 20px);
+  border: none;
 }
