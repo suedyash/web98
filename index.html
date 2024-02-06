@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>$Y2K</title>
-    <link rel="stylesheet" href="./node_modules/98.css/style.css">
     <link rel="stylesheet" href="./style.css">
+    <link href="./node_modules/os-gui/build/layout.css" rel="stylesheet" type="text/css">
+    <link href="./node_modules/os-gui/build/windows-98.css" rel="stylesheet" type="text/css">
+    <link href="./node_modules/os-gui/build/layout.css" rel="stylesheet" type="text/css">
     <body>
 
       <div id="desktop">
@@ -49,16 +51,16 @@
               <img src="./metadata/win98icons/minesweeper.ico">
               <span>Minesweeper</span>
             </div>
-            <div class="desktop-icon">
+            <div id="buy-page" class="desktop-icon">
               <img src="./metadata/win98icons/html.ico">
               <span>Buy $Y2K</span>
             </div>
-            <div class="desktop-icon">
-              <img src="./metadata/win98icons/html.ico">
+            <div id="twitter-icon" class="desktop-icon">
+              <img src="./metadata/win98icons/keyboard.ico">
               <span>Twitter</span>
             </div>
-            <div class="desktop-icon">
-              <img src="./metadata/win98icons/html.ico">
+            <div id="telegram-icon" class="desktop-icon">
+              <img src="./metadata/win98icons/mailbox_world.ico">
               <span>Telegram</span>
             </div>
 
@@ -73,13 +75,16 @@
             <span>Start</span>
           </button>
 
-          <div id="clock">
+          <div id="clock" class="inset-deep">
             <span>00:00</span>
           </div>
         </div>
 
       </div>
       <script src="./app.js"></script>
+      <script src="./node_modules/os-gui/MenuBar.js"></script>
+      <script src="./node_modules/jquery/src/jquery.js"></script> <!-- required by $Window.js -->
+      <script src="./node_modules/os-gui/$Window.js"></script>
     </body>
   </head>
 </html>

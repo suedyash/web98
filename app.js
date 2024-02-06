@@ -46,3 +46,23 @@ desktop.addEventListener('mouseup', function() {
     selectionBox.style.visibility = 'hidden';
   }
 });
+
+// Basic Hyperlink functions for some buttons
+
+const telegramIcon = document.getElementById('telegram-icon');
+telegramIcon.addEventListener('click', function() {
+  window.open('https://telegram.org/', '_blank');
+});
+
+const twitterIcon = document.getElementById('twitter-icon');
+twitterIcon.addEventListener('click', function() {
+  window.open('https://twitter.com/finisusdoteth/', '_blank');
+});
+
+// Creating a Internet explorer Windows insider the website for buy page
+
+document.getElementById('buy-page').addEventListener('click', function() {
+  const ieWindow = new $Window( {
+    title: "Internet Explorer"
+  });
+})
