@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>$Y2K</title>
     <link rel="stylesheet" href="./style.css">
+    <link href="./node_modules/os-gui/build/layout.css" rel="stylesheet" type="text/css">
+    <link href="./node_modules/os-gui/build/windows-98.css" rel="stylesheet" type="text/css">
+    <link href="./node_modules/os-gui/build/windows-default.css" rel="stylesheet" type="text/css">
     <body>
 
       <div id="desktop">
@@ -83,7 +86,9 @@
 
             </div>
 
-            <iframe id="ie-content" src=""></iframe>
+            <div id="ie-content-wrapper" class="inset-deep">
+              <iframe id="ie-content" src=""></iframe>
+            </div>
             
           </div>
 
@@ -103,6 +108,7 @@
 
       </div>
       <script src="./app.js"></script>
+      <script src="./node_modules/os-gui/MenuBar.js"></script>
     </body>
   </head>
 </html>
