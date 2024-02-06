@@ -12,7 +12,6 @@ setInterval(updateClock, 30000); // updates the clock immediately and every 30 s
 // Selection box logic
 let isSelecting = false;
 let startX, startY, endX, endY;
-
 const desktop = document.getElementById('desktop');
 const selectionBox = document.getElementById('selection-box');
 
@@ -59,10 +58,14 @@ twitterIcon.addEventListener('click', function() {
   window.open('https://twitter.com/finisusdoteth/', '_blank');
 });
 
-// Creating a Internet explorer Windows insider the website for buy page
+// Creating a Internet explorer Window lookalike for buy page
 
 document.getElementById('buy-page').addEventListener('click', function() {
-  const ieWindow = new $Window( {
-    title: "Internet Explorer"
-  });
-})
+  document.getElementById('ie-window').style.display = 'block';
+  document.getElementById('ie-content').src="https://jup.ag/";
+});
+
+document.getElementById('ie-close').addEventListener('click', function() {
+  document.getElementById('ie-window').style.display = 'none';
+});
+

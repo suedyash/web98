@@ -145,3 +145,47 @@ Taskbar Recreation
   margin-right: 1px;
   color: #000000;
 }
+
+/*
+Internet Explorer Window
+*/
+#ie-window {
+  position: fixed;
+  z-index: 10;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  background-color: #c3c3c3;
+  padding: 20px #c3c3c3;
+}
+#ie-header {
+  z-index: 9;
+  height: 20px;
+  background-color: #010081;
+  color: #fdffff;
+}
+
+#ie-minimize,
+#ie-maximize,
+#ie-close {
+  position: relative;
+  background-color: #d6d6ce;
+  width: 16px;
+  height: 16px;
+}
+#ie-minimize {
+  right: 25px;
+}
+#ie-maximize {
+  right: 15px;
+}
+#ie-close {
+  right: 5px;
+}
+
+#ie-content{
+  width: 100%; 
+  height: 100%;
+  z-index: 8;
+}
