@@ -69,3 +69,28 @@ document.getElementById('ie-close').addEventListener('click', function() {
   document.getElementById('ie-window').style.display = 'none';
 });
 
+// Internet Explorer Toolbar
+
+// function to change toolbar icons color on hover
+document.addEventListener('DOMContentLoaded', (event) => {
+  const toolbarHoverImages = {
+    'ie-home': './metadata/toolbar/color-icons/home.png',
+    'ie-favorites': './metadata/toolbar/color-icons/favorites.png',
+    'ie-print': './metadata/toolbar/color-icons/print.png',
+  };
+
+  function setImageSource(buttonId, src) {
+    const button = document.getElementById(buttonId);
+    const img = button.querySelector('img');
+    img.src = src;
+  }
+
+  Object.keys(toolbarHoverImages).forEach(buttonId => {
+    const button = document.getElementById(buttonId);
+    const img = button.querySelector('img');
+    const originalSrc = img.src;
+
+    button.addEventListener('mouseenter', () => setImageSource(buttonId, toolbarHoverImages[buttonId]));
+    button.addEventListener('mouseleave', () => setImageSource(buttonId, originalSrc));
+  });
+});
