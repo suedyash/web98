@@ -179,6 +179,7 @@ Internet Explorer Window
   letter-spacing: 1px;
   height: 20px;
   padding: 0 2px;
+  margin-bottom: 1px;
 }
 
 #ie-mini-icon {
@@ -214,9 +215,39 @@ Internet Explorer Window
   margin-right: 2px;
 }
 
+/*
+Internet Explorer inspired menu bar below header
+*/
+#ie-menu {
+  display: flex;
+  justify-content: flex-start;
+  background-color: #c3c3c3;
+  border-top: 1px solid #808080 ;
+  border-left: 1px solid #808080;
+  border-bottom: 1px solid #808080;
+  border-right: 1px solid #808080;
+  box-shadow: inset 0 1px 0 #ffffff;
+  padding: 1px 0px;
+  box-sizing: border-box;
+  width: 100%;
+}
+#ie-spacer {
+  background-color: #ffffff;
+  padding: 0px 2px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+#ie-menu-file,
+#ie-menu-fav,
+#ie-menu-help {
+  font-family: 'w98';
+  font-size: 14px;
+}
+
+
 #ie-content-wrapper {
   width: 99.8%;
-  height: calc(100% - 50px);
+  height: calc(100% - 150px);
   overflow: hidden;
 }
 #ie-content{

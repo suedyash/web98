@@ -62,7 +62,7 @@ twitterIcon.addEventListener('click', function() {
 
 document.getElementById('buy-page').addEventListener('click', function() {
   document.getElementById('ie-window').style.display = 'block';
-  document.getElementById('ie-content').src="https://jup.ag/";
+  document.getElementById('ie-content').src="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R&fixed=in";
 });
 
 document.getElementById('ie-close').addEventListener('click', function() {
