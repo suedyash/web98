@@ -16,12 +16,12 @@
         
         <div id="icons">
           <div id="icons-line1">
-            <div class="desktop-icon">
+            <div id="bin-page" class="desktop-icon">
               <img src="./metadata/win98icons/recycle_bin_full.ico">
               <span>Recycle Bin</span>
             </div>
             <div class="desktop-icon">
-              <img src="./metadata/win98icons/computer_explorer_cool.ico">
+              <img src="./metadata/win98icons/computer_explorer.ico">
               <span>My Computer</span>
             </div>
             <div class="desktop-icon">
@@ -131,8 +131,76 @@
 
           </div>
 
-          <!-- info-page window -->
+          <!-- recycle-bin window -->
+          <div id="bin-window" style="display: none;">
+            <div id="bin-header">
+              <img id="bin-mini-icon" src="./metadata/win98icons/recycle_bin_empty.ico">
+              <span id="bin-title">Recycle Bin</span>
+              <div id="bin-controls">
+                <button id="bin-minimize">
+                  <img src="./metadata/window/minimize.png">
+                </button>
+                <button id="bin-maximize">
+                  <img src="./metadata/window/maximize.png">
+                </button>
+                <button id="bin-close">
+                  <img src="./metadata/window/close.png">
+                </button>
+              </div>
+            </div>
+            <div id="bin-menu">
+              <div id="bin-spacer"></div>
+              <button id="bin-menu-file" class="lightweight" tabindex="-1">File</button>
+              <button id="bin-menu-fav" class="lightweight" tabindex="-1">Favorites</button>
+              <button id="bin-menu-help" class="lightweight" tabindex="-1">Help</button>
+            </div>
+            <div id="bin-toolbar">
+              <div id="bin-spacer"></div>
+              <button id="bin-home">
+                <img src="./metadata/toolbar/grey-icons/home.png">
+              </button>
+              <div id="bin-address-bar-container">
+                <div id="bin-address-bar" class="inset-deep">
+                  <span id="bin-address-bar-text">/y2k/C:/$Recycle.bin/</span>
+                </div>
+              </div>
+              <button id="bin-go">Go</button>
+            </div>
+            <div id="bin-content-wrapper" class="inset-deep">
+              <span id="bin-content">
+                <div id="bin-item-1">
+                  <img class="bin-item-image" src="./metadata/win98icons/package.ico">
+                  <span class="bin-item-text">Macintosh</span>
+                </div>
+                <div id="bin-item-2">
+                  <img class="bin-item-image" src="./metadata/win98icons/html.ico">
+                  <span class="bin-item-text">$WIF</span>
+                </div>
+                <div id="bin-item-3">
+                  <img class="bin-item-image" src="./metadata/win98icons/html.ico">
+                  <span class="bin-item-text">$BONK</span>
+                </div>
+                <div id="bin-item-4">
+                  <img class="bin-item-image" src="./metadata/win98icons/html.ico">
+                  <span class="bin-item-text">$AMC</span>
+                </div>
+                <div id="bin-item-5">
+                  <img class="bin-item-image" src="./metadata/win98icons/html.ico">
+                  <span class="bin-item-text">$GameStop</span>
+                </div>
+              </span>
+            </div>
+            <div id="bin-statusbar-container">
+              <span id="bin-status-1" class="inset-shallow">
+              </span>
+              <span id="bin-status-2" class="inset-shallow">
+              </span>
+              <span id="bin-status-3" class="inset-shallow">
+              </span>
+            </div>
+          </div>
 
+          <!-- info-page window -->
           <div id="info-window" style="display: none;">
             <div id="info-header">
               <img id="info-mini-icon" src="./metadata/win98icons/notepad.ico"
@@ -166,7 +234,6 @@
               <span id="info-status-3" class="inset-shallow">
               </span>
             </div>
-
           </div>
 
         </div>
@@ -178,14 +245,15 @@
             <span>Start</span>
           </button>
 
-          <div id="clock" class="inset-deep">
-            <span>00:00</span>
+          <div id="taskbar-toolbar" class="inset-deep">
+            <div id="clock">
+              <span>00:00</span>
+            </div>
           </div>
+          
         </div>
-
       </div>
       <script src="./app.js"></script>
-      <script src="./node_modules/os-gui/MenuBar.js"></script>
     </body>
   </head>
 </html>

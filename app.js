@@ -102,10 +102,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
   });
 });
 
-
 /*
- * Info Page    
- */
+Info Page    
+*/
 
 // creating and opening explorer window for info page
 document.getElementById('info-page').addEventListener('click', function() {
@@ -115,3 +114,13 @@ document.getElementById('info-close').addEventListener('click', function() {
   document.getElementById('info-window').style.display = 'none';
 });
 
+/*
+Recycle Bin    
+*/
+// creating and opening document window for Recycle Bin
+document.getElementById('bin-page').addEventListener('click', function() {
+  document.getElementById('bin-window').style.display = 'block';
+});
+document.getElementById('bin-close').addEventListener('click', function() {
+  document.getElementById('bin-window').style.display = 'none';
+});
