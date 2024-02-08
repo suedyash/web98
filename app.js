@@ -46,16 +46,23 @@ desktop.addEventListener('mouseup', function() {
   }
 });
 
-// Basic Hyperlink functions for some buttons
-
+// Basic functionality for some Desktop Icons
 const telegramIcon = document.getElementById('telegram-icon');
 telegramIcon.addEventListener('click', function() {
   window.open('https://telegram.org/', '_blank');
 });
-
 const twitterIcon = document.getElementById('twitter-icon');
 twitterIcon.addEventListener('click', function() {
   window.open('https://twitter.com/finisusdoteth/', '_blank');
+});
+const networkIcon = document.getElementById('network-icon');
+const audio = new Audio('./metadata/dialup.mp3');
+networkIcon.addEventListener('click', () => {
+  if (!audio.paused) {
+    audio.currentTime = 0;
+  }
+  audio.volume = 1.0;
+  audio.play();
 });
 
 // Creating a Internet explorer Window lookalike for buy page
