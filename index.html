@@ -36,7 +36,7 @@
               <img src="./metadata/win98icons/notepad.ico">
               <span>Credits</span>
             </div>
-            <div class="desktop-icon">
+            <div id="network-icon" class="desktop-icon">
               <img src="./metadata/win98icons/modem.ico">
               <span>Network</span>
             </div>
@@ -133,8 +133,7 @@
 
           <!-- info-page window -->
 
-          <div id="info-window" style="display: block;">
-
+          <div id="info-window" style="display: none;">
             <div id="info-header">
               <img id="info-mini-icon" src="./metadata/win98icons/notepad.ico"
               <span id="info-title">$Y2K - Info</span>
@@ -150,10 +149,22 @@
                 </button>
               </div>
             </div>
-              
+            <div id="info-menu">
+              <div id="info-spacer"></div>
+              <button id="info-menu-file" class="lightweight" tabindex="-1">File</button>
+              <button id="info-menu-fav" class="lightweight" tabindex="-1">Favorites</button>
+              <button id="info-menu-help" class="lightweight" tabindex="-1">Help</button>
+            </div>
             <div id="info-content-wrapper" class="inset-deep">
-              <span>Test readme text.</span>
-
+              <span id="info-content">Test readme text.</span>
+            </div>
+            <div id="info-statusbar-container">
+              <span id="info-status-1" class="inset-shallow">
+              </span>
+              <span id="info-status-2" class="inset-shallow">
+              </span>
+              <span id="info-status-3" class="inset-shallow">
+              </span>
             </div>
 
           </div>

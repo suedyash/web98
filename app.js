@@ -101,11 +101,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
  */
 
 // creating and opening explorer window for info page
-
 document.getElementById('info-page').addEventListener('click', function() {
   document.getElementById('info-window').style.display = 'block';
 });
-
-document.getElementById('ie-close').addEventListener('click', function() {
+document.getElementById('info-close').addEventListener('click', function() {
   document.getElementById('info-window').style.display = 'none';
 });
+
