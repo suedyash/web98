@@ -94,3 +94,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
     button.addEventListener('mouseleave', () => setImageSource(buttonId, originalSrc));
   });
 });
+
+
+/*
+ * Info Page    
+ */
+
+// creating and opening explorer window for info page
+
+document.getElementById('info-page').addEventListener('click', function() {
+  document.getElementById('info-window').style.display = 'block';
+});
+
+document.getElementById('ie-close').addEventListener('click', function() {
+  document.getElementById('info-window').style.display = 'none';
+});
