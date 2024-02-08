@@ -1,0 +1,29 @@
+Hex codes for colors based on various themes and wallpapers:
+
+1. Wallpaper - Japanese blue mountain with red sky
+	
+	PinkishRed: #da5469
+	DarkishBlue: #2b2a70
+	LighterBlue: #4b54a9
+	PinkYellow Accent: #f2a891
+	PastelYellowCremeBrulee Accent: #Ffdaa0
+	PastelPurple Accent: #b460c1
+	PastelDarkerPurple Accent: #b7519b
+
+2. Wallpaper - Greenish Acient Tomb like wallpaper with a sword hanging from vines and a hero
+
+	DarkBg: #1e2d2e
+	GreenAccent: #69afa1
+	LightGreenAccent: #a4e8d3
+	Mine Shaft Black: #222222
+	Gallery Whie: #eeeeee
+
+3. Wallpaper - fade pinkish erd tree
+
+  red = #F38BA8 
+  Pink: #F5C2E7
+  Teal: #94E2D5
+  Black: #585B70
+  Rosewater: #F5E0DC
+  Text: #CDD6F4
+  Lavender: #B4BEFE
