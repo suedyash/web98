@@ -1,14 +1,3 @@
-// Function to update the Clock in TaskBar
-function updateClock() {
-  const now = new Date();
-  const hours = now.getHours().toString().padStart(2, '0');
-  const minutes = now.getMinutes().toString().padStart(2, '0');
-  document.querySelector('#clock span').textContent = `${hours}:${minutes}`;
-}
-
-updateClock();
-setInterval(updateClock, 30000); // updates the clock immediately and every 30 seconds
-
 // Selection box logic
 let isSelecting = false;
 let startX, startY, endX, endY;
@@ -47,6 +36,7 @@ desktop.addEventListener('mouseup', function() {
 });
 
 // Basic functionality for some Desktop Icons
+
 const telegramIcon = document.getElementById('telegram-icon');
 telegramIcon.addEventListener('click', function() {
   window.open('https://telegram.org/', '_blank');
@@ -76,7 +66,9 @@ document.getElementById('ie-close').addEventListener('click', function() {
   document.getElementById('ie-window').style.display = 'none';
 });
 
-// Internet Explorer Toolbar
+/*
+Internet Explorer Toolbar
+*/
 
 // function to change toolbar icons color on hover
 document.addEventListener('DOMContentLoaded', (event) => {
@@ -124,3 +116,31 @@ document.getElementById('bin-page').addEventListener('click', function() {
 document.getElementById('bin-close').addEventListener('click', function() {
   document.getElementById('bin-window').style.display = 'none';
 });
+
+/*
+Task Bar
+*/
+
+// Sound-Toggle
+document.addEventListener('DOMContentLoaded', () => {
+  const soundToggle = document.getElementById('sound-toggle');
+  const soundToggleImg = document.getElementById('sound-toggle-img');
+  const mutedIconPath = './metadata/win98icons/loudspeaker_muted.ico';
+  const unmutedIconPath = './metadata/win98icons/loudspeaker_rays.ico';
+  let isMuted = false;
+  soundToggle.addEventListener('click', () => {
+    isMuted = !isMuted;
+    audio.muted = isMuted;
+    soundToggleImg.src = isMuted ? mutedIconPath : unmutedIconPath;
+  });
+});
+
+// Function to update the Clock in TaskBar
+function updateClock() {
+  const now = new Date();
+  const hours = now.getHours().toString().padStart(2, '0');
+  const minutes = now.getMinutes().toString().padStart(2, '0');
+  document.querySelector('#clock span').textContent = `${hours}:${minutes}`;
+}
+updateClock();
+setInterval(updateClock, 30000); // updates the clock immediately and every 30 seconds

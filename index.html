@@ -20,40 +20,28 @@
               <img src="./metadata/win98icons/recycle_bin_full.ico">
               <span>Recycle Bin</span>
             </div>
-            <div class="desktop-icon">
+            <div class="desktop-icon-disabled">
               <img src="./metadata/win98icons/computer_explorer.ico">
               <span>My Computer</span>
             </div>
-            <div class="desktop-icon">
+            <div class="desktop-icon-disabled">
               <img src="./metadata/win98icons/directory_closed.ico">
               <span>Documents</span>
-            </div>
-            <div id="info-page" class="desktop-icon">
-              <img src="./metadata/win98icons/help_question_mark.ico">
-              <span>Info</span>
-            </div>
-            <div class="desktop-icon">
-              <img src="./metadata/win98icons/notepad.ico">
-              <span>Credits</span>
-            </div>
-            <div id="network-icon" class="desktop-icon">
-              <img src="./metadata/win98icons/modem.ico">
-              <span>Network</span>
-            </div>
-          </div>
-          <div id="icons-line2">
-            <div class="desktop-icon">
-              <img src="./metadata/win98icons/paint.ico">
-              <span>Paint</span>
             </div>
             <div class="desktop-icon">
               <img src="./metadata/win98icons/minesweeper.ico">
               <span>Minesweeper</span>
             </div>
-            <div id="buy-page" class="desktop-icon">
-              <img src="./metadata/win98icons/html.ico">
-              <span>Buy $Y2K</span>
+            <div id="network-icon" class="desktop-icon">
+              <img src="./metadata/win98icons/modem.ico">
+              <span>Network</span>
             </div>
+            <div class="desktop-icon">
+              <img src="./metadata/win98icons/paint.ico">
+              <span>Paint</span>
+            </div>
+          </div>
+          <div id="icons-line2">
             <div id="twitter-icon" class="desktop-icon">
               <img src="./metadata/win98icons/keyboard.ico">
               <span>Twitter</span>
@@ -62,6 +50,14 @@
               <img src="./metadata/win98icons/mailbox_world.ico">
               <span>Telegram</span>
             </div>
+            <div id="info-page" class="desktop-icon">
+              <img src="./metadata/win98icons/help_question_mark.ico">
+              <span>Token Info</span>
+            </div>
+            <div id="buy-page" class="desktop-icon">
+              <img src="./metadata/win98icons/html.ico">
+              <span>Buy $Y2K</span>
+            </div>
           </div>
 
           <!-- internet-explorer window -->
@@ -69,7 +65,7 @@
           <div id="ie-window" style="display: none;">
 
             <div id="ie-header">
-              <img id="ie-mini-icon" src="./metadata/win98icons/html.ico"
+              <img id="ie-mini-icon" src="./metadata/win98icons/msie2.ico"
               <span id="ie-title">Buy $Y2K! - Internet Explorer</span>
               <div id="ie-controls">
                 <button id="ie-minimize">
@@ -111,7 +107,7 @@
               <div id="ie-spacer"></div>
               <span id="ie-address-title">Address</span>
               <div id="ie-address-bar" class="inset-deep">
-                <img id="ie-mini-icon" src="./metadata/win98icons/html2.ico">
+                <img id="ie-mini-icon" src="./metadata/win98icons/msie2.ico">
                 <span id="ie-address-bar-text">Buy $Y2k - raydium.io/swap</span>
               </div>
             </div>
@@ -204,7 +200,7 @@
           <div id="info-window" style="display: none;">
             <div id="info-header">
               <img id="info-mini-icon" src="./metadata/win98icons/notepad.ico"
-              <span id="info-title">$Y2K - Info</span>
+              <span id="info-title">$Y2K - Token Info</span>
               <div id="info-controls">
                 <button id="info-minimize">
                   <img src="./metadata/window/minimize.png">
@@ -224,7 +220,14 @@
               <button id="info-menu-help" class="lightweight" tabindex="-1">Help</button>
             </div>
             <div id="info-content-wrapper" class="inset-deep">
-              <span id="info-content">Test readme text.</span>
+              <span id="info-content">
+                $Y2k - Year 2000
+                <br>
+                <br>
+                Contract Address: EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v
+                <br>
+
+              </span>
             </div>
             <div id="info-statusbar-container">
               <span id="info-status-1" class="inset-shallow">
@@ -246,12 +249,19 @@
           </button>
 
           <div id="taskbar-toolbar" class="inset-deep">
+            <div id="task-scheduler">
+              <img id="task-scheduler-img" src="./metadata/win98icons/sched_tasks.ico">
+            </div>
+            <div id="sound-toggle">
+              <img id="sound-toggle-img" src="./metadata/win98icons/loudspeaker_rays.ico">
+            </div>
             <div id="clock">
               <span>00:00</span>
             </div>
           </div>
-          
+
         </div>
+        
       </div>
       <script src="./app.js"></script>
     </body>
