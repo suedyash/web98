@@ -1,9 +1,10 @@
-// Selection box logic
+/*
+* Selection box logic
+*/
 let isSelecting = false;
 let startX, startY, endX, endY;
 const desktop = document.getElementById('desktop');
-const selectionBox = document.getElementById('selection-box');
-
+const selectionBox = document.getElementById('selection-box'); 
 desktop.addEventListener('mousedown', function(e) {
   isSelecting = true;
   startX = e.clientX;
@@ -15,7 +16,6 @@ desktop.addEventListener('mousedown', function(e) {
   selectionBox.style.height = '0';
   selectionBox.style.visibility = 'visible';
 });
-
 desktop.addEventListener('mousemove', function(e) {
   if (isSelecting) {
     endX = e.clientX;
@@ -27,16 +27,16 @@ desktop.addEventListener('mousemove', function(e) {
     selectionBox.style.top = `${Math.min(startY, endY)}px`;
   }
 });
-
 desktop.addEventListener('mouseup', function() {
   if (isSelecting) {
     isSelecting = false;
     selectionBox.style.visibility = 'hidden';
   }
 });
-
-// Basic functionality for some Desktop Icons
-
+/******************************/
+/*
+* Basic functionality for some Desktop Icons
+*/
 const telegramIcon = document.getElementById('telegram-icon');
 telegramIcon.addEventListener('click', function() {
   window.open('https://telegram.org/', '_blank');
@@ -54,9 +54,11 @@ networkIcon.addEventListener('click', () => {
   audio.volume = 1.0;
   audio.play();
 });
-
-// Creating a Internet explorer Window lookalike for buy page
-
+/******************************/
+/*
+* Creating a Internet explorer Window lookalike for buy page
+*/
+// 
 document.getElementById('buy-page').addEventListener('click', function() {
   document.getElementById('ie-window').style.display = 'block';
   document.getElementById('ie-content').src="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R&fixed=in";
@@ -65,25 +67,21 @@ document.getElementById('buy-page').addEventListener('click', function() {
 document.getElementById('ie-close').addEventListener('click', function() {
   document.getElementById('ie-window').style.display = 'none';
 });
-
+/******************************/
 /*
 Internet Explorer Toolbar
 */
-
-// function to change toolbar icons color on hover
 document.addEventListener('DOMContentLoaded', (event) => {
   const toolbarHoverImages = {
     'ie-home': './metadata/toolbar/color-icons/home.png',
     'ie-favorites': './metadata/toolbar/color-icons/favorites.png',
     'ie-print': './metadata/toolbar/color-icons/print.png',
   };
-
   function setImageSource(buttonId, src) {
     const button = document.getElementById(buttonId);
     const img = button.querySelector('img');
     img.src = src;
   }
-
   Object.keys(toolbarHoverImages).forEach(buttonId => {
     const button = document.getElementById(buttonId);
     const img = button.querySelector('img');
@@ -93,34 +91,47 @@ document.addEventListener('DOMContentLoaded', (event) => {
     button.addEventListener('mouseleave', () => setImageSource(buttonId, originalSrc));
   });
 });
-
+/******************************/
 /*
 Info Page    
 */
-
-// creating and opening explorer window for info page
 document.getElementById('info-page').addEventListener('click', function() {
   document.getElementById('info-window').style.display = 'block';
 });
 document.getElementById('info-close').addEventListener('click', function() {
   document.getElementById('info-window').style.display = 'none';
 });
-
+/******************************/
 /*
 Recycle Bin    
 */
-// creating and opening document window for Recycle Bin
 document.getElementById('bin-page').addEventListener('click', function() {
   document.getElementById('bin-window').style.display = 'block';
 });
 document.getElementById('bin-close').addEventListener('click', function() {
   document.getElementById('bin-window').style.display = 'none';
 });
-
+/******************************/
+/*
+* Minesweeper
+*/
+document.getElementById('minesweeper-menu-game').addEventListener('click', function() {
+  const dropdown = document.getElementById('minesweeper-menu-game-dropdown');
+  dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+});
+// Click outside to close the dropdown
+window.addEventListener('click', function(event) {
+  if (!event.target.matches('#minesweeper-menu-game')) {
+    const dropdown = document.getElementById('minesweeper-menu-game-dropdown');
+    if (dropdown.style.display === 'block') {
+      dropdown.style.display = 'none';
+    }
+  }
+});
+/******************************/
 /*
 Task Bar
 */
-
 // Sound-Toggle
 document.addEventListener('DOMContentLoaded', () => {
   const soundToggle = document.getElementById('sound-toggle');
@@ -134,7 +145,6 @@ document.addEventListener('DOMContentLoaded', () => {
     soundToggleImg.src = isMuted ? mutedIconPath : unmutedIconPath;
   });
 });
-
 // Function to update the Clock in TaskBar
 function updateClock() {
   const now = new Date();
@@ -144,3 +154,4 @@ function updateClock() {
 }
 updateClock();
 setInterval(updateClock, 30000); // updates the clock immediately and every 30 seconds
+/******************************/
