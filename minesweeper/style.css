@@ -1,0 +1,19 @@
+body {
+    font-family: 'w98';
+    background-color: #c6c6c6;
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: 'w98';
+    src: url(./font/w95fa.woff2) format('woff2');
+}
+#button_beginner,
+#button_intermediate,
+#button_expert {
+    font-family: 'w98';
+}
+/******************************/
+#play_area {
+    margin: auto;
+}
