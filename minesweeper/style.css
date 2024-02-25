@@ -11,7 +11,7 @@ body {
 #button_beginner,
 #button_intermediate,
 #button_expert {
-    font-family: 'w98';
+  display: none;
 }
 /******************************/
 #play_area {

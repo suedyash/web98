@@ -115,6 +115,12 @@ document.getElementById('bin-close').addEventListener('click', function() {
 /*
 * Minesweeper
 */
+document.getElementById('minesweeper-icon').addEventListener('click', function() {
+  document.getElementById('minesweeper-window').style.display = 'block';
+});
+document.getElementById('minesweeper-close').addEventListener('click', function() {
+  document.getElementById('minesweeper-window').style.display = 'none';
+});
 document.getElementById('minesweeper-menu-game').addEventListener('click', function() {
   const dropdown = document.getElementById('minesweeper-menu-game-dropdown');
   dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
@@ -128,6 +134,28 @@ window.addEventListener('click', function(event) {
     }
   }
 });
+
+// Connect dropdown menu buttons with the game's insetting buttons
+document.querySelectorAll('.game-setting').forEach(button => {
+  button.addEventListener('click', function() {
+    const setting =  this.getAttribute('data-setting');
+    const iframeWindow = document.querySelector('#minesweeper-wrapper iframe').contentWindow;
+    iframeWindow.postMessage({ setting: setting }, '*');
+  });
+});
+
+// Add an event listener for the dropdown "New" button
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelector('.game-setting[data-setting="new"]').addEventListener('click', function() {
+    // Post a message to the Minesweeper iframe
+    const iframe = document.querySelector('#minesweeper-wrapper iframe');
+    if (iframe) {
+      iframe.contentWindow.postMessage({ action: 'startNewGame' }, '*'); // Adjust the target origin as necessary
+    }
+  });
+});
+
+
 /******************************/
 /*
 Task Bar

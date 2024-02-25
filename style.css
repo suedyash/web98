@@ -623,16 +623,18 @@ Recycle Bin
   padding: 10px 0px;
 }
 /******************************/
+
 /*
-* Minesweeper
+--------------------------------------------------
+  Minesweeper
+--------------------------------------------------
 */
+
 #minesweeper-window {
-  position: fixed;
+  width: auto;
+  height: auto;
+  display: flex;
   z-index: 10;
-  top: 10%;
-  left: 10%;
-  width: 80%;
-  height: 80%;
   background-color: #c3c3c3;
   padding: 3px;
   border-radius: 0;
@@ -642,6 +644,15 @@ Recycle Bin
               0 2px 0px #000,
               2px 0 0px #000; 
 }
+
+#minesweeper-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  padding: 0px;
+}
+
 #minesweeper-header {
   display: flex;
   align-items: center;
@@ -724,15 +735,7 @@ Recycle Bin
   text-decoration: none;
   display: block;
 }
-#minesweeper-wrapper {
-  width: 100%; 
-  height: 100%;
-  border: none;
-  display: flex;
-  flex-direction: row;
-  gap: 18px;
-  padding: 6px;
-}
+
 /******************************/
 /*
 * Taskbar Recreation

@@ -14,6 +14,7 @@ arcade.minesweeper.face.prototype.get_element = function() {
   if(!this.element) {
     this.element = $.createElement("div")
       .style({"width": 26, "height": 26, "margin": "auto", "background-image": "url('image/sprite.png')", "background-repeat": "no-repeat"})
+      .setAttribute("id", "minesweeper-smiley") // Add an ID to the element
       .addEventListener("mousedown", function() {
         if(self.state === "smile") self.set_state("depressed_smile");
       })

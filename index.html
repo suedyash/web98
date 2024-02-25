@@ -8,6 +8,8 @@
     <link href="./node_modules/os-gui/build/layout.css" rel="stylesheet" type="text/css">
     <link href="./node_modules/os-gui/build/windows-98.css" rel="stylesheet" type="text/css">
     <link href="./node_modules/os-gui/build/windows-default.css" rel="stylesheet" type="text/css">
+  </head>
+    
     <body>
 
       <div id="desktop">
@@ -28,7 +30,7 @@
               <img src="./metadata/win98icons/directory_closed.ico">
               <span>Documents</span>
             </div>
-            <div class="desktop-icon">
+            <div id="minesweeper-icon" class="desktop-icon">
               <img src="./metadata/win98icons/minesweeper.ico">
               <span>Minesweeper</span>
             </div>
@@ -240,7 +242,7 @@
           </div>
 
           <!-- minesweeper-window -->
-          <div id="minesweeper-window" style="display: block;">
+          <div id="minesweeper-window" style="display: none;"> <!--change it to "none"-->
             <div id="minesweeper-header">
               <img id="minesweeper-mini-icon" src="./metadata/win98icons/minesweeper.ico">
               <span id="minesweeper-title">Minesweeper</span>
@@ -251,7 +253,7 @@
                 <button id="minesweeper-maximize">
                   <img src="./metadata/window/maximize.png">
                 </button>
-                <button = id="minesweeper-close">
+                <button id="minesweeper-close">
                   <img src="./metadata/window/close.png">
                 </button>
               </div>
@@ -298,5 +300,4 @@
       </div>
       <script src="./app.js"></script>
     </body>
-  </head>
 </html>
