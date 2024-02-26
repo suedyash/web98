@@ -112,9 +112,11 @@ document.getElementById('bin-close').addEventListener('click', function() {
   document.getElementById('bin-window').style.display = 'none';
 });
 /******************************/
+
 /*
 * Minesweeper
 */
+
 document.getElementById('minesweeper-icon').addEventListener('click', function() {
   document.getElementById('minesweeper-window').style.display = 'block';
 });
@@ -125,6 +127,7 @@ document.getElementById('minesweeper-menu-game').addEventListener('click', funct
   const dropdown = document.getElementById('minesweeper-menu-game-dropdown');
   dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
 });
+
 // Click outside to close the dropdown
 window.addEventListener('click', function(event) {
   if (!event.target.matches('#minesweeper-menu-game')) {
@@ -144,17 +147,32 @@ document.querySelectorAll('.game-setting').forEach(button => {
   });
 });
 
-// Add an event listener for the dropdown "New" button
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelector('.game-setting[data-setting="new"]').addEventListener('click', function() {
-    // Post a message to the Minesweeper iframe
-    const iframe = document.querySelector('#minesweeper-wrapper iframe');
-    if (iframe) {
-      iframe.contentWindow.postMessage({ action: 'startNewGame' }, '*'); // Adjust the target origin as necessary
-    }
-  });
-});
+// Add an event listener for the dropdown "Exit" button
+document.getElementById('minesweeper-menu-dropdown-exit').addEventListener('click', function() {
+  document.getElementById('minesweeper-window').style.display = 'none';
+})
 
+// Adjusting minesweeper-window Size according to game modes
+const gameSizes = {
+  beginner: { width: '172px', height: '262px' },
+  intermediate: { width: '284px', height: '376px' },
+  expert: { width: '508px', height: '374px' },
+}
+document.querySelectorAll('.game-setting').forEach(button => {
+  button.addEventListener('click', function() {
+    const setting = this.getAttribute('data-setting');
+    const size = gameSizes[setting];
+    if (size) {
+      //set the size of minesweeper-window
+      const minesweeperWindow = document.getElementById('minesweeper-window');
+      minesweeperWindow.style.width = size.width;
+      minesweeperWindow.style.height = size.height;
+      const iframe = minesweeperWindow.querySelector('iframe');
+      iframe.style.width = size.width;
+      iframe.style.height = size.height;
+    }
+  })
+})
 
 /******************************/
 /*

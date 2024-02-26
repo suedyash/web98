@@ -1,12 +1,13 @@
-body {
-    font-family: 'w98';
-    background-color: #c6c6c6;
-    margin: 0;
-    padding: 0;
+body, html {
+  font-family: 'w98';
+  background-color: none;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden;
 }
 @font-face {
-    font-family: 'w98';
-    src: url(./font/w95fa.woff2) format('woff2');
+  font-family: 'w98';
+  src: url(./font/w95fa.woff2) format('woff2');
 }
 #button_beginner,
 #button_intermediate,
@@ -15,5 +16,9 @@ body {
 }
 /******************************/
 #play_area {
-    margin: auto;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  padding: 0 !important;
+  margin: 0 !important;
 }
