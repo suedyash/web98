@@ -243,9 +243,12 @@
 
           <!-- minesweeper-window -->
           <div id="minesweeper-window" style="display: none;">
+
             <div id="minesweeper-header">
+
               <img id="minesweeper-mini-icon" src="./metadata/win98icons/minesweeper.ico">
               <span id="minesweeper-title">Minesweeper</span>
+
               <div id="minesweeper-controls">
                 <button id="minesweeper-minimize">
                   <img src="./metadata/window/minimize.png">
@@ -257,11 +260,18 @@
                   <img src="./metadata/window/close.png">
                 </button>
               </div>
+
             </div>
+
             <div id="minesweeper-menu">
               <button id="minesweeper-menu-game" class="lightweight" tabindex="-1">Game</button>
               <button id="minesweeper-menu-help" class="lightweight" tabindex="-1">Help</button>
             </div>
+            
+            <div id="minesweeper-wrapper">
+              <iframe src="./minesweeper/index.html"></iframe>
+            </div>
+
             <!--   dropdown menu for game settings -->
             <div id="minesweeper-menu-game-dropdown" class="settings-dropdown outset-deep" style="display: none;">
               <button class="game-setting lightweight" data-setting="beginner">Beginner</button>
@@ -269,9 +279,7 @@
               <button class="game-setting lightweight" data-setting="expert">Expert</button>
               <button id="minesweeper-menu-dropdown-exit" class="game-setting lightweight" data-setting="exit">Exit</button>
             </div>
-            <div id="minesweeper-wrapper">
-              <iframe src="./minesweeper/index.html"></iframe>
-            </div>
+            
           </div>
         </div>
 

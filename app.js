@@ -1,3 +1,6 @@
+// Mobile optimization variable
+const isSmallScreen = window.innerWidth <= 500;
+
 /*
 * Selection box logic
 */
@@ -158,10 +161,16 @@ const gameSizes = {
   intermediate: { width: '284px', height: '376px' },
   expert: { width: '508px', height: '374px' },
 }
+const gameSizesMobile = {
+  beginner: { width: '172px', height: '256px' },
+  intermediate: { width: '284px', height: '368px' },
+  expert: { width: '508px', height: '368px' },
+}
+
 document.querySelectorAll('.game-setting').forEach(button => {
   button.addEventListener('click', function() {
     const setting = this.getAttribute('data-setting');
-    const size = gameSizes[setting];
+    const size = isSmallScreen? gameSizesMobile[setting] : gameSizes[setting];
     if (size) {
       //set the size of minesweeper-window
       const minesweeperWindow = document.getElementById('minesweeper-window');
