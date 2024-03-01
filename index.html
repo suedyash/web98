@@ -8,6 +8,7 @@
     <link href="./layout.css" rel="stylesheet" type="text/css">
     <link href="./windows-98.css" rel="stylesheet" type="text/css">
     <link href="./windows-default.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
     
     <body>
@@ -279,11 +280,42 @@
               <button class="game-setting lightweight" data-setting="expert">Expert</button>
               <button id="minesweeper-menu-dropdown-exit" class="game-setting lightweight" data-setting="exit">Exit</button>
             </div>
-            
+
+            <!-- dropdown menu for help -->
+            <div id="minesweeper-menu-help-dropdown" class="help-dropdown outset-deep" style="display: none;">
+              <button class="lightweight">Help Topics</button>
+              <button class="lightweight">About Minesweeper</button>
+            </div>
+
           </div>
         </div>
 
         <div id="taskbar">
+
+          <div id="start-page" class="outset-deep" style="display: none;">
+
+            <div id="win-banner-container">
+
+              <span id="win-banner">Windows98</span>
+
+            </div>
+
+            <div id="main-banner-container">
+              
+              <div id="banner-text-1" class="banner-text">Y2K</div>
+              <div id="banner-text-2" class="banner-text">2000s</div>
+              <div id="banner-text-3" class="banner-text">4<br>0<br>4</div>
+
+              <div id="attention-window" class="outset-deep">
+                <div class="blinking">
+                  <i id="attention-icon" class="fa fa-exclamation-triangle"></i>
+                  <p>BUY<br>NOW!</p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
 
           <button id="start-button">
             <img src="./metadata/win98icons/windows.ico">

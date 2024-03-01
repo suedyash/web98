@@ -129,6 +129,24 @@ document.getElementById('minesweeper-close').addEventListener('click', function(
 document.getElementById('minesweeper-menu-game').addEventListener('click', function() {
   const dropdown = document.getElementById('minesweeper-menu-game-dropdown');
   dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+
+  const game = document.getElementById('minesweeper-menu-game');
+  if (dropdown.style.display === 'block') {
+    game.className = 'toggle selected';
+  } else {
+    game.className = 'lightweight';
+  }
+});
+document.getElementById('minesweeper-menu-help').addEventListener('click', function() {
+  const dropdown = document.getElementById('minesweeper-menu-help-dropdown');
+  dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+
+  const help = document.getElementById('minesweeper-menu-help');
+  if (dropdown.style.display === 'block') {
+    help.className = 'toggle selected';
+  } else {
+    help.className = 'lightweight';
+  }
 });
 
 // Click outside to close the dropdown
@@ -137,6 +155,20 @@ window.addEventListener('click', function(event) {
     const dropdown = document.getElementById('minesweeper-menu-game-dropdown');
     if (dropdown.style.display === 'block') {
       dropdown.style.display = 'none';
+
+      const game = document.getElementById('minesweeper-menu-game');
+      game.className = 'lightweight';
+    }
+  }
+});
+window.addEventListener('click', function(event) {
+  if (!event.target.matches('#minesweeper-menu-help')) {
+    const dropdown = document.getElementById('minesweeper-menu-help-dropdown');
+    if (dropdown.style.display === 'block') {
+      dropdown.style.display = 'none';
+
+      const help = document.getElementById('minesweeper-menu-help');
+      help.className = 'lightweight';
     }
   }
 });
@@ -157,9 +189,9 @@ document.getElementById('minesweeper-menu-dropdown-exit').addEventListener('clic
 
 // Adjusting minesweeper-window Size according to game modes
 const gameSizes = {
-  beginner: { width: '172px', height: '262px' },
-  intermediate: { width: '284px', height: '376px' },
-  expert: { width: '508px', height: '374px' },
+  beginner: { width: '172px', height: '260px' },
+  intermediate: { width: '284px', height: '372px' },
+  expert: { width: '508px', height: '372px' },
 }
 const gameSizesMobile = {
   beginner: { width: '172px', height: '256px' },
@@ -209,4 +241,26 @@ function updateClock() {
 }
 updateClock();
 setInterval(updateClock, 30000); // updates the clock immediately and every 30 seconds
-/******************************/
+
+// Start Page
+document.getElementById('start-button').addEventListener('click', function() {
+  const startPage = document.getElementById('start-page');
+  startPage.style.display = startPage.style.display === 'none' ? 'block' : 'none';
+
+  const startButton = document.getElementById('start-button');
+  if (startPage.style.display === 'block') {
+    startButton.className = 'toggle selected';
+  } else {
+    startButton.className = 'outset-deep';
+  }
+})
+// click outside to close start page
+window.addEventListener('click', function(event) {
+  const startPage = document.getElementById('start-page');
+  const startButton = document.getElementById('start-button');
+
+  if (startPage.style.display === 'block' && !startButton.contains(event.target)) {
+    startPage.style.display = 'none';
+    startButton.className = 'outset-deep';
+  }
+});
