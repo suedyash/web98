@@ -42,11 +42,11 @@ desktop.addEventListener('mouseup', function() {
 */
 const telegramIcon = document.getElementById('telegram-icon');
 telegramIcon.addEventListener('click', function() {
-  window.open('https://telegram.org/', '_blank');
+  window.open('https://telegram.org/', '_blank'); // #WIP Add Mail/Contact functionality here
 });
 const twitterIcon = document.getElementById('twitter-icon');
 twitterIcon.addEventListener('click', function() {
-  window.open('https://twitter.com/finisusdoteth/', '_blank');
+  window.open('https://twitter.com/swyzsh/', '_blank');
 });
 const networkIcon = document.getElementById('network-icon');
 const audio = new Audio('./metadata/dialup.mp3');
@@ -64,7 +64,7 @@ networkIcon.addEventListener('click', () => {
 // 
 document.getElementById('buy-page').addEventListener('click', function() {
   document.getElementById('ie-window').style.display = 'block';
-  document.getElementById('ie-content').src="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R&fixed=in";
+  document.getElementById('ie-content').src="https://oldgoogle.neocities.org/2009/";
 });
 
 document.getElementById('ie-close').addEventListener('click', function() {
@@ -214,6 +214,7 @@ document.querySelectorAll('.game-setting').forEach(button => {
     }
   })
 })
+// abcdefghijklmopqrstuvwxyzABCDEFGHIGJKLMNOPQRSTUVWXYZ
 
 /******************************/
 /*
