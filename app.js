@@ -1,3 +1,13 @@
+/*
+
+#WIP: Make Taskbar Tabs for open windows
+#WIP: Implement Minimize into tabs and open back from the tabs
+#WIP: Implement Maximize to full screen (minus taskbar)
+#WIP: Create Functional MS Paint
+#WIP: Create Functional Internet Explorer Clone
+
+*/
+
 // Mobile optimization variable
 const isSmallScreen = window.innerWidth <= 500;
 
@@ -62,7 +72,7 @@ networkIcon.addEventListener('click', () => {
 * Creating a Internet explorer Window lookalike for buy page
 */
 // 
-document.getElementById('buy-page').addEventListener('click', function() {
+document.getElementById('ie-page').addEventListener('click', function() {
   document.getElementById('ie-window').style.display = 'block';
   document.getElementById('ie-content').src="https://oldgoogle.neocities.org/2009/";
 });
@@ -264,4 +274,73 @@ window.addEventListener('click', function(event) {
     startPage.style.display = 'none';
     startButton.className = 'outset-deep';
   }
+});
+
+/*--------------------------------------------------
+  CRT-ify PFP Generator
+--------------------------------------------------*/
+/* open window with desktop icon */
+document.getElementById('meme-gen-page').addEventListener('click', function() {
+  document.getElementById('meme-gen-window').style.display = 'block';
+});
+/* close window with action button */
+document.getElementById('meme-gen-close').addEventListener('click', function() {
+  document.getElementById('meme-gen-window').style.display = 'none';
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const uploadInput = document.getElementById('meme-gen-upload');
+  const generateBtn = document.getElementById('meme-gen-generate');
+  const downloadBtn = document.getElementById('meme-gen-download');
+  const preResultImg = document.getElementById('pre-result');
+  const canvas = document.getElementById('canvas');
+  const ctx = canvas.getContext('2d');
+  const result = document.getElementById('result');
+  const borderImage = new Image();
+  borderImage.src = './metadata/border.png';
+
+  canvas.width = 300;
+  canvas.height = 300;
+
+  uploadInput.onchange = function(e) {
+    const file = e.target.files[0];
+    if (file) {
+      preResultImg.style.display = 'none';
+
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        const img = new Image();
+        img.onload = function() {
+          // Clear the canvas
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          ctx.drawImage(img, 70, 24, 160, 160);
+          canvas.style.display = 'inline-block'; // Show canvas
+          result.style.display = 'none'; // Hide result
+        }
+        img.src = event.target.result;
+      }
+      reader.readAsDataURL(file);
+    }
+  };
+
+  generateBtn.onclick = function() {
+    // Ensure border image is drawn last so it's on top
+    if (borderImage.complete) {
+      ctx.drawImage(borderImage, 0, 0, 300, 300);
+      result.src = canvas.toDataURL('image/png');
+      canvas.style.display = 'none';
+      result.style.display = 'inline-block'; // Show result
+    } else {
+      console.error('Border image not loaded');
+    }
+  };
+
+  downloadBtn.onclick = function() {
+    if (result.src) {
+      const link = document.createElement('a');
+      link.download = 'getCRTified.png';
+      link.href = result.src;
+      link.click();
+    }
+  };
 });
